@@ -1,6 +1,6 @@
-<p align="center" style="position:relative;margin:0 auto; width: 70px;">
+<p align="center" style="position:relative;margin:0 auto;">
     <img src=".github/logo.png" alt="logo"
-    style="position: relative; width: 100%;"/>
+    style="position: relative; width: 70px;"/>
 </p>
 <h1 align="center">CuteKona</h1>
 <p align="center">基于Playwright, 各种瑟瑟图片网站的爬虫</p>
