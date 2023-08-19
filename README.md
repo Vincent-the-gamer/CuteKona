@@ -37,3 +37,26 @@
 
 # 如何使用该程序
 待完善中，等我有空做个页面啥的打包一下吧，现在普通用户用不了
+
+硬核玩家：
+
+拉取项目后，先安装依赖
+
+~~~shell
+npm install
+~~~
+
+然后通过引入`src`文件夹的`konachan.js`, 调用函数即可
+
+~~~js
+const konachan = require("{可能的相对路径}/src/konachan")
+/**
+ * Konachan爬取主函数
+ * @param {*} tags 传入要查询的tag
+ * @param {*} pages 传入一个数组，里面是所有要爬取的页码
+ * @param {*} size 根据大小搜索，传入一个对象： { sizeType, width, height }, sizeType为枚举值，width, height为数字，可以不传
+ * @param {*} order 按照指定顺序检索(传入枚举值)，可以不传
+ * @param {*} rating 按照图片分级检索(传入枚举值)，可以不传
+ */
+konachan("hoshino_ai", [1])
+~~~
