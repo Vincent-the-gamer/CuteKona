@@ -3,3 +3,4 @@ node_modules/
 /playwright/.cache/
 output
 .DS_Store
+/backend

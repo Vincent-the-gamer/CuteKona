@@ -36,20 +36,16 @@
 ![proxy](.github/motrixProxy.png)
 
 # 如何使用该程序
-待完善中，等我有空做个页面啥的打包一下吧，现在普通用户用不了
-
-硬核玩家：
-
-拉取项目后，先安装依赖
+直接安装npm发布包
 
 ~~~shell
-npm install
+npm install cutekona
 ~~~
 
-然后通过引入`src`文件夹的`konachan.js`, 调用函数即可
+然后引入，调用函数即可
 
 ~~~js
-const konachan = require("{可能的相对路径}/src/konachan")
+const konachan = require("konachan")
 /**
  * Konachan爬取主函数
  * @param {*} tags 传入要查询的tag

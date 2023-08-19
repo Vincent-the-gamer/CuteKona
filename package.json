@@ -2,11 +2,13 @@
   "name": "cutekona",
   "version": "1.0.0",
   "description": "Konachan Pics Downloader",
+  "main": "entry.js",
   "scripts": {
     "record": "pnpm exec playwright codegen --viewport-size=\"1280, 720\" --ignore-https-errors",
     "test": "pnpm exec playwright test",
     "install-chromium": "pnpm exec playwright install chromium",
-    "uninstall": "pnpm exec playwright uninstall --all"
+    "uninstall": "pnpm exec playwright uninstall --all",
+    "publish-public": "pnpm publish --access=public"
   },
   "keywords": [],
   "author": "Vincent-the-gamer",
