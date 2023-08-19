@@ -2,7 +2,6 @@
  * 获取Konachan图片
  */
 const fs = require("fs");
-const path = require("path");
 const useAdvancedSearch = require("./useAdvancedSearch");
 const { buildUrl } = useAdvancedSearch();
 
@@ -51,10 +50,9 @@ module.exports = (playwrightPage) => {
         }
     }
 
-    const outputDir = path.resolve(__dirname, "../../output")
 
     // 结果写入文件
-    async function writeResult(){
+    async function writeResult(outputDir){
         // 写入文件
         fs.exists(outputDir, (exists) => {
             // 路径不存在则创建

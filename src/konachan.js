@@ -3,6 +3,7 @@ const useKonachanFetch = require("../hooks/konachan/useKonachanFetch");
 
 /**
  * Konachan爬取主函数
+ * @param {*} outputDir 传入要写入url的路径（会自动生成文件）
  * @param {*} tags 传入要查询的tag
  * @param {*} pages 传入一个数组，里面是所有要爬取的页码
  * @param {*} size 根据大小搜索，传入一个对象： { sizeType, width, height }, sizeType为枚举值，width, height为数字，可以不传
@@ -10,6 +11,7 @@ const useKonachanFetch = require("../hooks/konachan/useKonachanFetch");
  * @param {*} rating 按照图片分级检索(传入枚举值)，可以不传
  */
 module.exports = async (
+  outputDir,
   tags = "",
   pages = [1],
   size,
@@ -31,9 +33,10 @@ module.exports = async (
 
   const { getKonachanPics, writeResult } = useKonachanFetch(page);
 
+  
   for (let page of pages) {
     const isSuccess = await getKonachanPics(tags, page, size, order, rating)
-    isSuccess ? writeResult() : console.log("获取图片失败！")
+    isSuccess ? writeResult(outputDir) : console.log("获取图片失败！")
   }
   
 

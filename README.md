@@ -39,20 +39,23 @@
 直接安装npm发布包
 
 ~~~shell
-npm install cutekona
+npm install cute-kona
 ~~~
 
 然后引入，调用函数即可
 
 ~~~js
-const konachan = require("konachan")
 /**
- * Konachan爬取主函数
+ * @param {*} outputDir 传入要写入url的路径（会自动生成文件）
  * @param {*} tags 传入要查询的tag
  * @param {*} pages 传入一个数组，里面是所有要爬取的页码
  * @param {*} size 根据大小搜索，传入一个对象： { sizeType, width, height }, sizeType为枚举值，width, height为数字，可以不传
  * @param {*} order 按照指定顺序检索(传入枚举值)，可以不传
  * @param {*} rating 按照图片分级检索(传入枚举值)，可以不传
  */
-konachan("hoshino_ai", [1])
+const cutekona = require("cute-kona");
+const path = require("path");
+
+const outputDir = path.resolve(__dirname, "./output")
+cutekona(outputDir, "hoshino_ai", [1])
 ~~~
