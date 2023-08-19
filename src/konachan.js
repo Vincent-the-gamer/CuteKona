@@ -1,5 +1,5 @@
 const { chromium } = require('playwright');
-const useKonachanFetch = require("../hooks/useKonachanFetch");
+const useKonachanFetch = require("../hooks/konachan/useKonachanFetch");
 
 (async () => {
   const browser = await chromium.launch({
@@ -20,10 +20,10 @@ const useKonachanFetch = require("../hooks/useKonachanFetch");
   // for (let i = 1; i <= 2; i++) {
   //   await getKonachanPics("rem_(re:zero)", i)
   // }
-  await getKonachanPics("nagatoro_hayase", 1)
+  const isSuccess = await getKonachanPics("hayase_nagatoro", 1)
 
-  writeResult()
-
+  isSuccess ? writeResult() : console.log("获取图片失败！")
+  
 
   // ---------------------
   await context.close();

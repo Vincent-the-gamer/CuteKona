@@ -32,5 +32,8 @@
 
 [https://github.com/agalwood/Motrix](https://github.com/agalwood/Motrix)
 
+温馨提示，需要魔法，在Motrix中配置代理服务器即可
+![proxy](.github/motrixProxy.png)
+
 # 如何使用该程序
 待完善中，等我有空做个页面啥的打包一下吧，现在普通用户用不了
