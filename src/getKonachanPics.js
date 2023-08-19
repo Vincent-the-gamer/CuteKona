@@ -17,9 +17,10 @@ const useKonachanFetch = require("../hooks/useKonachanFetch");
 
   const { getKonachanPics, writeResult } = useKonachanFetch(page);
 
-  for (let i = 1; i <= 2; i++) {
-    await getKonachanPics("rem_(re:zero)", i)
-  }
+  // for (let i = 1; i <= 2; i++) {
+  //   await getKonachanPics("rem_(re:zero)", i)
+  // }
+  await getKonachanPics("nagatoro_hayase", 1)
 
   writeResult()
 

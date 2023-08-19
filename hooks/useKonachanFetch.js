@@ -2,6 +2,7 @@
  * 获取Konachan图片
  */
 const fs = require("fs");
+const path = require("path");
 const useAdvancedSearch = require("../hooks/useAdvancedSearch");
 const { buildUrl } = useAdvancedSearch();
 
@@ -28,20 +29,22 @@ module.exports = (playwrightPage) => {
         }
     }
 
+    const outputDir = path.resolve(__dirname, "../output")
+
     // 结果写入文件
     async function writeResult(){
         // 写入文件
-        fs.exists("../output", (exists) => {
+        fs.exists(outputDir, (exists) => {
             // 路径不存在则创建
             if (!exists) {
-                fs.mkdir("../output", (err) => {
+                fs.mkdir(outputDir, (err) => {
                     if (err) {
                         throw err
                     }
                 })
             }
             // 结果写入文件
-            fs.writeFile('../output/konachan.txt', imgUrls.join("\n"), (err) => {
+            fs.writeFile(`${outputDir}/konachan.txt`, imgUrls.join("\n"), (err) => {
                 if (err) {
                     throw err
                 } else {
