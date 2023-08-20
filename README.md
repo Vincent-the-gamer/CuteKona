@@ -1,6 +1,6 @@
 <p align="center" style="position:relative;margin:0 auto;">
     <img src=".github/logo.png" alt="logo"
-    style="position: relative; width: 70px;"/>
+    style="position: relative; width: 80px;"/>
 </p>
 <h1 align="center">CuteKona</h1>
 <p align="center">基于Playwright, 各种瑟瑟图片网站的爬虫</p>
@@ -90,7 +90,6 @@ const Order = {
 
 ~~~js
 const { konachan } = require("cute-kona");
-const path = require("path");
 
 /**
  * konachan(outputDir, tags, pages)
@@ -127,7 +126,7 @@ konachan("./output", "hoshino_ai", [1], {
 若要使用代理，请对代理进行配置
 
 ~~~js
-const { konachan, Size, Rating, Order， proxy } = require("cute-kona")
+const { konachan, Size, Rating, Order, proxy } = require("cute-kona")
 
 proxy.setProxy("http://xxx.xxx.com:1234","username", "password")
 // 或者
